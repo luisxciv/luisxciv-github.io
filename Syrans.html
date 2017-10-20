@@ -35,16 +35,26 @@
 				<article>
 					<pre>
 						<code class="cpp">
-if __name__ == __main__:
-    for i in range(1, 100):
-        if i % 3 == 0 and i % 5 == 0:
-            print("Welcome")
-        else:
-            print(i)
+class AESCipher(object):
+
+    def __init__(self, key):
+        self.bs = 32
+        self.key = hashlib.sha256(key.encode()).digest()
+
+    def decrypt(self, enc):
+        enc = base64.b64decode(enc)
+        iv = enc[:AES.block_size]
+        cipher = AES.new(self.key, AES.MODE_CBC, iv)
+        return self._unpad(cipher.decrypt(enc[AES.block_size:])).decode('utf-8')
+
+    def _pad(self, s):
+        return s + (self.bs - len(s) % self.bs) * chr(self.bs - len(s) % self.bs)
+
+    @staticmethod
+    def _unpad(s):
+        return s[:-ord(s[len(s)-1:])]
 						</code>
 					</pre>
-
-					<!-- Owner from Discord Server is my God -->
 					<h1 class="title">Syrans: <span>Python ransomware</span></h1>
 					<pre>@author Luis Garcia</pre>
 
