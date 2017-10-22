@@ -14,7 +14,6 @@
 <body>
 <div id="wrapper">
     <section class="left me">
-        <!--TODO: work out how to relative links to work e.g. res/img/avatar.png -->
         <img src="https://avatars2.githubusercontent.com/u/22042789?s=460&amp;v=4" width="230" alt="Luis Garcia" class="avatar" />
         <article>
             <h2><font size="4"> Luis Garcia Calzada</font></h2>
@@ -36,25 +35,51 @@
         <article>
 					<pre>
 						<code class="cpp">
-def quandldata(quandl_id):
-    API_path = '{}.pkl'.format(quandl_id).replace('/','-')
-    try:
-        f = open(cache_path, 'rb')
-        df = pickle.load(f)
-    except (OSError, IOError) as e:
-        df = quandl.get(quandl_id, returns="pandas")
-        df.to_pickle(cache_path)
-    return df
+
+color1 = '#1e90ff'
+color2 = '#add8e6'
+rippleprice = quandl.get("BITFINEX/XRPUSD")
+rippleprice = rippleprice.loc['2016-04-24':'2018-07-31']
+
+rippleprice['mkt_av']=rippleprice['Mid'].rolling(window=7).mean();
+
+series1 = go.Scatter(
+    x=rippleprice.index.get_level_values('Date'),
+    y=rippleprice['Mid'],
+    name='Daily',
+    line = dict(
+        color = (color2),
+        width = 2))
+
+series2 = go.Scatter(
+    x=rippleprice.index.get_level_values('Date'),
+    y=rippleprice['mkt_av'],
+    name='7 day average',
+    line = dict(
+        color = (color1),
+        width = 3))
+
+data = [series1, series2]
+
+layout = go.Layout(
+    title='Ripple price',
+    yaxis=dict(title='Price (USD)'),
+    legend=dict(orientation="h", yanchor='top', y=1.1, xanchor='center', x=0.5)
+    )
+
+fig = go.Figure(data=data, layout=layout)
+#plotly.offline.iplot(fig, filename='btc_price')
+py.iplot(fig, filename='xrp_price')
 						</code>
 					</pre>
             <h1 class="title">Cryptocharts <span>: a cryptocurrency market analyzer</span></h1>
             <pre>@author Luis Garcia</pre>
-            <p>The goal of this project is to provide cryptocurrency analysis using Python. The Python script is meant to <font color=#9370db> retrieve, analyze,</font> and <font color="#9370db">visualize</font> data on different cryptocurrencies. </p>
+            <p>. The Python script is meant to <font color=#9370db> retrieve, analyze,</font> and <font color="#9370db">visualize</font> data on different cryptocurrencies.The quandl module allows simplified data extraction through their API . We can also read from data used from either .csv or .json files   </p>
 
             <br/>
             <div>
-                <p>This is an interactive graph made by using Plotly</p>
-                <a href="https://plot.ly/~luisxciv/1/?share_key=Sf5BPlxgqnvLT0pEA1nxQP" target="_blank" title="Plot 1" style="display: block; text-align: left;"><img src="https://plot.ly/~luisxciv/1.png?share_key=Sf5BPlxgqnvLT0pEA1nxQP" alt="Plot 1" style="max-width: 100%;width: 200px;"  width="200" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+                <p>This is the result of running the script above on a notebook. The good thing about the notebook is that we can keep pulling data from the API so our charts get updated.</p>
+                <a href="https://plot.ly/~luisxciv/3/?share_key=OHALZkBjc0Xb098yPVthqp" target="_blank" title="XPRprice" style="display: block; text-align: center;"><img src="https://plot.ly/~luisxciv/3.png?share_key=OHALZkBjc0Xb098yPVthqp" alt="XPRprice" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
                 <script data-plotly="luisxciv:1" sharekey-plotly="Sf5BPlxgqnvLT0pEA1nxQP" src="https://plot.ly/embed.js" async></script>
             </div>
 
