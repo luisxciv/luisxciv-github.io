@@ -70,8 +70,6 @@ def main():
                 print
                 '[+]' + ip + ":" + banner
                 vulns(banner)
-if __name__ == '__main__':
-    main()
 
 def retbanner(ip, port):
     try:
@@ -88,6 +86,9 @@ def vulns(banner):
         if line.strip('\n') in banner:
             print
             "Server is vulnerable" +banner.strip('/n')
+
+if __name__ == '__main__':
+    main()
 
 						</code>
 					</pre>
