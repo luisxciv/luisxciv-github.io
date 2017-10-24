@@ -36,30 +36,19 @@
         <article>
             <h2 class="title"> pentestlib: <span>a python pentesting library</span></h2>
             <pre>@author Luis Garcia</pre>
-            <p>The goal of this project is to create a library of pentesting scripts, everything built simple and completely built in python. You can find all of the scripts here in my Github
+            <p>The goal of this project is to build a library of pentest python scripts. You can find all of the scripts inside my pentestlib repo.
             </p>
             <h3>third-party libraries: <span>Some of the scripts require the use of third-party libraries, you can use  pip  to easily install modules. </span></h3>
 
             <pre>
 
 						<code class="cpp">
-import nmap
-import pydf
-import python-nmap
-import pygeoip
-import mechanize
-import BeautifulSoup4
-import python-bluez
-import bluetooth
-import python-obexftp</code>
+import nmap import pydf import python-nmap import pygeoip import mechanize import BeautifulSoup4 import python-bluez import bluetooth import python-obexftp</code>
 					</pre>
-            <br/>
-            <h3>banner-grabbing: </h3><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host/ip aka 'banners'.  </span></h3>
+            <h3>banner-grabbing</h3><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host/ip aka 'banners'. The script iterates through a list of ports and range a subnet of IP's using range(0,255) and uses the socket.recv module to read the first 2048 bytes of the banner to check it against a vulnerable list of vulnerable banners.  </span></h3>
             <br></br>
             <code class="cpp">
-                <font size="3" color="#00ff7f">
                     <h4>  Usage: bannergrabber.py vulnerablebanners.txt  </h4>
-                </font>
             </code>
             <pre>
 						<code class="cpp">
