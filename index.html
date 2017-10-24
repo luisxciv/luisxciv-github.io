@@ -54,22 +54,6 @@ import nmap import pydf import python-nmap import pygeoip import mechanize impor
 						<code class="cpp">
 import socket
 import sys
-
-def retbanner(ip, port):
-    try:
-        socket.setdefaulttimeout(2)
-        s = socket.socket()
-        s.connect((ip, port))
-        banner = s.recv(2048)
-        return banner
-    except:
-        return
-def vulns(banner):
-    f = open('knownbanner.txt', 'r')
-    for line in f.readlines():
-        if line.strip('\n') in banner:
-            print
-            "Server is vulnerable" +banner.strip('/n')
 def main():
     if len(sys.argv) == 2:
         filename = sys.argv[1]
@@ -87,6 +71,23 @@ def main():
                 vulns(banner)
 if __name__ == '__main__':
     main()
+
+def retbanner(ip, port):
+    try:
+        socket.setdefaulttimeout(2)
+        s = socket.socket()
+        s.connect((ip, port))
+        banner = s.recv(2048)
+        return banner
+    except:
+        return
+def vulns(banner):
+    f = open('knownbanner.txt', 'r')
+    for line in f.readlines():
+        if line.strip('\n') in banner:
+            print
+            "Server is vulnerable" +banner.strip('/n')
+
 						</code>
 					</pre>
             </br>
