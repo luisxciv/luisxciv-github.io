@@ -51,7 +51,6 @@ import nmap import pydf import python-nmap import pygeoip import mechanize impor
                     <h4>  Usage: bannergrabber.py vulnerablebanners.txt  </h4>
             </code>
             <pre>
-						<code class="cpp">
 import socket
 import sys
 
@@ -61,15 +60,17 @@ def main():
         print
         "reading vulnerabilities from" + filename
 
-    Portlist = [21,22,80,443]
+    portlist = [21,22,80,443]
     for x in range(1,255):
         ip = '192.168.1.' + str(x)
-        for port in Portlist:
+        for port in portlist:
             banner = retbanner(ip, port)
             if banner:
                 print
                 '[+]' + ip + ":" + banner
-                vulns(banner)
+                vulns(banner, filename)
+if __name__ == '__main__':
+    main()
 
 def retbanner(ip, port):
     try:
@@ -80,15 +81,13 @@ def retbanner(ip, port):
         return banner
     except:
         return
-def vulns(banner):
-    f = open('knownbanner.txt', 'r')
+
+def vulns(banner, filename):
+    f = open(filename, 'r')
     for line in f.readlines():
         if line.strip('\n') in banner:
             print
             "Server is vulnerable" +banner.strip('/n')
-
-if __name__ == '__main__':
-    main()
 
 						</code>
 					</pre>
