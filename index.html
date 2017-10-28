@@ -129,6 +129,35 @@ if __name__ == '__main__':
 						</code>
 					</pre>
                 </br>
+            <h2>zip dictionary attack</h2><span> The zipfile module allows us to interact with .zip files so here's how simple a dictionary attack can be </span>
+            <code class="cpp">
+                <h3>  TODO: add parsing args and error handling  </h3>
+            </code>
+            <pre>
+						<code class="c">
+import zipfile
+from threading import Thread
+
+def extraction(file, password):
+    try:
+        file.extractfile(pwd = password)
+        print
+        "Found password" + password
+    except:
+        pass
+def main():
+    file = zipfile.ZipFile('secret.zip')
+    passfile = open('dictionary.txt')
+    for line in passfile.readlines():
+        password = line.strip('\n')
+        t = Thread(target=extraction, args=(file, password))
+        t.start()
+if __name__ == '__main__':
+    main()
+
+						</code>
+					</pre>
+            </br>
 
 
 
