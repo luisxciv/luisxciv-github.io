@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Pylogin</title>
+    <title>pentestlib</title>
     <link rel="icon" href="res/img/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -45,7 +45,7 @@
 						<code class="cpp">
 import nmap import pydf import python-nmap import pygeoip import mechanize import BeautifulSoup4 import python-bluez import bluetooth import python-obexftp</code>
 					</pre>
-            <h2>banner-grabbing</h2><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host. The script iterates through a list of ports and range a subnet of IP's using range(0,255) and uses the socket.recv module to read the first 2048 bytes of the banner to check it against a vulnerable list of vulnerable banners.  </span></h3>
+            <h2>vulnerable-banners</h2><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host. The script iterates through a list of ports and range a subnet of IP's using range(0,255) and uses the socket.recv module to read the first 2048 bytes of the banner to check it against a vulnerable list of vulnerable banners.  </span></h3>
             <code class="cpp">
                     <h3>  Usage: bannergrabber.py vulnerablebanners.txt  </h3>
             </code>
@@ -129,9 +129,40 @@ if __name__ == '__main__':
 						</code>
 					</pre>
                 </br>
+
             <h2>zip dictionary attack</h2><span> The zipfile module allows us to interact with .zip files so here's how simple a dictionary attack can be </span>
             <code class="cpp">
                 <h3>  TODO: add parsing args and error handling  </h3>
+            </code>
+            <pre>
+						<code class="c">
+import zipfile
+from threading import Thread
+
+def extraction(file, password):
+    try:
+        file.extractfile(pwd = password)
+        print
+        "Found password" + password
+    except:
+        pass
+def main():
+    file = zipfile.ZipFile('secret.zip')
+    passfile = open('dictionary.txt')
+    for line in passfile.readlines():
+        password = line.strip('\n')
+        t = Thread(target=extraction, args=(file, password))
+        t.start()
+if __name__ == '__main__':
+    main()
+
+						</code>
+					</pre>
+            </br>
+
+            <h2>Port scanner</h2><span> Scans and host and lists open ports. It also has a banner grabber to get information about the port. If you're going to portscan a system or a network don't use this script.Nmap is a powerful port scanning tool with lots of functionality. If you're not using nmap already then check it out at https://nmap.org/</span>
+            <code class="cpp">
+                <h3> Usage: python portscanner.py -h 10.10.10.10 -p 22 80 443  </h3>
             </code>
             <pre>
 						<code class="c">
