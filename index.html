@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>pentestlib</title>
     <link rel="icon" href="res/img/icon.png" />
@@ -44,6 +45,45 @@
 						<code class="cpp">
 import nmap import pydf import python-nmap import pygeoip import mechanize import BeautifulSoup4 import python-bluez import bluetooth import python-obexftp</code>
 					</pre>
+
+            <h2>unix password-cracker</h2><span> "Unix stores the salt as the first two characters of the encrypted password." which is a poor salting technique. Using the same crypt() module we can do a dictionary attack by hashing the words and identifying the salt</span>
+            <code class="cpp">
+                <h3>  Usage: add the /etc/passwd path  </h3>
+            </code>
+            <pre>
+						<code class="c">
+import crypt
+
+def testpass(password):
+    salt = password[0:2]    #This is assuming you know how the password was salted,
+                            #UNIX uses crypt() which adds the same 2 char salt to every password
+    dictionaryfile = open('dictionary.txt', 'r')
+    for word in dictionaryfile.readlines():
+        word = word.strip('\n')
+        cryptword = crypt.crypt(word,salt)
+        if cryptword == password:
+            print
+            'found password:' + word + "\n"
+            return
+        print
+        'password not found'
+        return
+def main():
+    passwordfile = open('passwords.txt')
+    for line in passwordfile.readlines():
+        if ":" in line:
+            username = line.split(':')[0]
+            password = line.split(':')[1].strip(' ')
+            print
+            'cracking password for' + username
+            testpass(password)
+
+if __name__ == '__main__':
+    main()
+						</code>
+					</pre>
+            </br>
+
             <h2>vulnerable-banners</h2><span>The purpose of banner grabbing is to perform vulnerability analysis by obtaining information provided by the network host. The script iterates through a list of ports and range a subnet of IP's using range(0,255) and uses the socket.recv module to read the first 2048 bytes of the banner to check it against a vulnerable list of vulnerable banners.  </span></h3>
             <code class="cpp">
                     <h3>  Usage: bannergrabber.py vulnerablebanners.txt  </h3>
@@ -91,43 +131,7 @@ if __name__ == '__main__':
 						</code>
 					</pre>
             </br>
-            <h2>unix password-cracker</h2><span> "Unix stores the salt as the first two characters of the encrypted password." which is a poor salting technique. Using the same crypt() module we can do a dictionary attack by hashing the words and identifying the salt</span>
-            <code class="cpp">
-                    <h3>  Usage: add the /etc/passwd path  </h3>
-            </code>
-                <pre>
-						<code class="c">
-import crypt
 
-def testpass(password):
-    salt = password[0:2]    #This is assuming you know how the password was salted,
-                            #UNIX uses crypt() which adds the same 2 char salt to every password
-    dictionaryfile = open('dictionary.txt', 'r')
-    for word in dictionaryfile.readlines():
-        word = word.strip('\n')
-        cryptword = crypt.crypt(word,salt)
-        if cryptword == password:
-            print
-            'found password:' + word + "\n"
-            return
-        print
-        'password not found'
-        return
-def main():
-    passwordfile = open('passwords.txt')
-    for line in passwordfile.readlines():
-        if ":" in line:
-            username = line.split(':')[0]
-            password = line.split(':')[1].strip(' ')
-            print
-            'cracking password for' + username
-            testpass(password)
-
-if __name__ == '__main__':
-    main()
-						</code>
-					</pre>
-                </br>
 
             <h2>zip dictionary attack</h2><span> The zipfile module allows us to interact with .zip files so here's how simple a dictionary attack can be </span>
             <code class="cpp">
