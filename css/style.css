@@ -169,7 +169,7 @@ a:hover {
     user-select: none;
     /* z-index: 99; */
     
-    background: url('') no-repeat;
+    background: url('../images/art.jpg') no-repeat;
     background-size: cover;
 }
 #background1 {
@@ -183,7 +183,7 @@ a:hover {
     user-select: none;
     /* z-index: 99; */
     
-    background: url('') no-repeat;
+    background: url('../images/mexico.jpg') no-repeat;
     background-size:100%;
 }
 .dir-ho-tl {} .dir-ho-tl ul {
@@ -6559,9 +6559,9 @@ textarea {
     color: #fff;
     font-weight: 600;
     font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    background: #263a78;
-    background: linear-gradient(to bottom, #455ca2, #263a78);
+    font-size: 13px;
+    background: #267745;
+    background: linear-gradient(to bottom, #094922, #267745);
     text-transform: uppercase;
 }
 .tourz-hom-ser {

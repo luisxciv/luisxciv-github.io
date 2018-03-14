@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="228" column="133" lean-forward="false" selection-start-line="228" selection-start-column="133" selection-end-line="228" selection-end-column="133" />
+              <caret line="287" column="34" lean-forward="false" selection-start-line="287" selection-start-column="34" selection-end-line="287" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6240" column="21" lean-forward="true" selection-start-line="6240" selection-start-column="21" selection-end-line="6240" selection-end-column="21" />
+            <state relative-caret-position="114">
+              <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -39,10 +39,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>slogan</find>
-      <find>banner</find>
       <find>banner and</find>
-      <find>search</find>
       <find>agrega</find>
+      <find>v3-add</find>
+      <find>search</find>
+      <find>tourz-sear</find>
+      <find>tiangu</find>
+      <find>tianguis</find>
+      <find>banner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,8 +55,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -62,11 +66,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="765" />
-    <option name="height" value="559" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="775" />
+    <option name="y" value="112" />
+    <option name="width" value="921" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -100,12 +104,6 @@
               <item name="luisxciv.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="luisxciv.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="luisxciv.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -119,6 +117,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luis\Documents\GitHub\luisxciv.github.io\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -158,10 +161,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3142000" />
+    <option name="totallyTimeSpent" value="5871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -225,18 +228,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="228" column="133" lean-forward="false" selection-start-line="228" selection-start-column="133" selection-end-line="228" selection-end-column="133" />
+        <state relative-caret-position="114">
+          <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6240" column="21" lean-forward="true" selection-start-line="6240" selection-start-column="21" selection-end-line="6240" selection-end-column="21" />
+        <state relative-caret-position="160">
+          <caret line="287" column="34" lean-forward="false" selection-start-line="287" selection-start-column="34" selection-end-line="287" selection-end-column="34" />
           <folding />
         </state>
       </provider>
