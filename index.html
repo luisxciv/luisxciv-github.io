@@ -1,828 +1,739 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8"/>
-	<meta name="author" content="Luis Garcia" />
-	<meta name="description" content="Freelance portfolio">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Luis Garcia Calzada</title>
-	
-	<!-- Royal Preloader CSS -->
-	<link href="css/royal_preloader.css" rel="stylesheet">
-
-	<!-- jQuery Files -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-	<!-- Parallax File -->
-	<script type="text/javascript" src="js/parallax.min.js"></script>
-
-	<!-- Royal Preloader -->
-	<script type="text/javascript" src="js/royal_preloader.min.js"></script>
-	<script type="text/javascript">
-		Royal_Preloader.config({
-		    mode:           'number',
-		    showProgress:   false,
-		    background:     '#1d1d1d'
-		});
-	</script>
-
-	<!-- Stylesheets -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/ionicons.min.css" rel="stylesheet">
-	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/logoiconfont.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet" title="main-css">
-
-	<!-- Style Switcher / remove for production -->
-	<link href="css/style-switcher.css" rel="stylesheet">
-	
-	<!-- Alternate Stylesheets / choose what color and base you want and include the 2 files regularly AFTER style.css above -->
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/blue.css" title="blue">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/green.css" title="green">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/orange.css" title="orange">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/red.css" title="red">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/orangelight.css" title="orangelight">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/pinkish.css" title="pinkish">
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/seagul.css" title="seagul">
-	<link rel="alternate stylesheet" type="text/css" href="css/base-light.css" title="base-light">
-</head>
-<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
-	<div id="royal_preloader"></div>
-
-	<!-- Start Switcher / Remove for production -->
-	<div class="demo_changer">
-	    <div class="demo-icon">
-	        <i class="pe-7s-settings"></i>
-	    </div><!-- end opener icon -->
-	    <div class="form_holder">
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <div class="predefined_styles">
-	                	<h4>Base</h4>
-	                    <a href="" data-rel="main-css" class="styleswitch2"><div class="btn dark-css-square"></div></a>  
-	                    <a href="" data-rel="base-light" class="styleswitch2"><div class="btn light-css-square"></div></a>
-	                    <hr>
-	                    <h4>Colors</h4>
-	                    <a href="" data-rel="main-css" class="styleswitch"><div class="btn purple-css-square"></div></a>
-	                    <a href="" data-rel="blue" class="styleswitch"><div class="btn blue-css-square"></div></a>    
-	                    <a href="" data-rel="green" class="styleswitch"><div class="btn green-css-square"></div></a>
-	                    <a href="" data-rel="orange" class="styleswitch"><div class="btn orange-css-square"></div></a>
-	                    <a href="" data-rel="red" class="styleswitch"><div class="btn red-css-square"></div></a>
-	                    <a href="" data-rel="orangelight" class="styleswitch"><div class="btn orangelight-css-square"></div></a>
-	                    <a href="" data-rel="seagul" class="styleswitch"><div class="btn seagul-css-square"></div></a>
-	                    <a href="" data-rel="pinkish" class="styleswitch"><div class="btn pinkish-css-square"></div></a>
-	                </div><!-- /.end predefined_styles -->
-	            </div><!-- /.end col -->
-	        </div><!-- /.end row -->
-	    </div><!-- /.end form_holder -->
-	</div><!-- /.end demo_changer -->
-	<!-- End Switcher / Remove for production -->
-
-	<!-- Begin Header -->
-	<header>
-		<!-- Begin Navigation -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="row">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand scroll-link" href="#home" data-id="home"><span class="icon-handle-streamline-vector logo"></span></a>
-					</div>
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#home" data-id="home" class="scroll-link"></a></li>
-							<li><a href="#ideology" data-id="ideology" class="scroll-link">Ideologia</a></li>
-							<li><a href="#services" data-id="services" class="scroll-link">Servicios</a></li>
-							<li><a href="#about" data-id="about" class="scroll-link">Acerca de mi</a></li>
-							<li><a href="#work" data-id="work" class="scroll-link">Trabajo</a></li>
-							<li><a href="#contact" data-id="contact" class="scroll-link">Contactame</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="pricing-options.html">Precios Diseño Web</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div>
-			</div><!-- /.container-fluid -->
-		</nav>
-		<!-- End Navigation -->
-	</header>
-	<!-- End Header -->
-
-	<!-- Begin Jumbotron -->
-	<div class="jumbotron jumbotron-main" id="home">
-		<div id="particles-js"></div><!-- /.particles div -->
-		<div class="container center-vertically-holder">
-			<div class="center-vertically">
-				<div id="scaleReveal" class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
-					<span class="icon big-logo"></span>
-					<div>
-						<h2>Hola, mi nombre es <STRONG>Luis</STRONG> y trabajo en:</h2>
-					</div>
-					<div class="ticker">
-						<h1>software</h1>
-						<h1>ux/ui</h1>
-						<h1>redes</h1>
-						<h1>apps moviles</h1>
-						<h1>db's </h1>
-						<h1>msfconsole</h1>
-					</div>
-					<hr>
-					<a href="#work" data-id="work" class="scroll-link btn btn-default btn-white btn-lg mt15">Mi trabajo <span class="ion-android-arrow-down"></span></a>
-				</div><!-- /.column -->
-			</div><!-- /.vertical center -->
-		</div><!-- /.container -->
-	</div>
-	<!-- End Jumbotron -->
-
-	<!-- Begin Intro -->
-	<section id="ideology">
-
-		<!-- Begin Hello Intro -->
-		<div id="hello-intro" class="pt60 pb60">
-			<div class="container">
-				<div class="row">
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Hello Intro -->
-
-		<!-- Begin Our Process Title -->
-		<div id="our-process-title" class="pt30 pb30">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h4 class="no-margin">mis mas grandes aportaciones a un proyecto son</h4>
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Our Process Title -->
-
-		<!-- Begin Our Process -->
-		<div id="our-process">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
-						<div class="leftReveal">
-							<div class="process-intro">
-								<h3 class="process-number"> 1</h3>
-								<div><span class="process-icons pe-7s-users rotateBottomReveal"></span></div>
-								<h2>Communicacion<br>effectiva</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-users"></span></div>
-								<h2 class="mt15 mb20">Communicacion<br>effectiva</h2>
-								<p class="no-margin"> desarollo proyectos en los cuales todas las partes involucradas se comuniquen efectivamente </p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
-						<div class="bottomReveal">
-							<div class="process-intro">
-								<h3 class="process-number">2</h3>
-								<div><span class="process-icons pe-7s-display1 rotateBottomReveal"></span></div>
-								<h2>Diseño<br>UX/UI</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-display1"></span></div>
-								<h2 class="mt15 mb20">Diseño<br>UX/UI</h2>
-								<p class="no-margin">me aseguro de que el usuario final tenga una experiencia cómoda al interactuar con mis paginas y aplicaciones</p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50 no-border-right">
-						<div class="rightReveal">
-							<div class="process-intro">
-								<h3 class="process-number">3</h3>
-								<div><span class="process-icons pe-7s-rocket rotateBottomReveal"></span></div>
-								<h2>Tecnologia<br>de punta</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-rocket"></span></div>
-								<h2 class="mt15 mb20">Tecnologia<br>de punta</h2>
-								<p class="no-margin">Al desarrollar un proyecto, me aseguro de que la tecnología que se utiliza sea la más adecuada para la tarea en mano.</p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Our Process -->
-
-		<!-- Begin Quote Carousel -->
-		<div id="carousel" class="testimonial-carousel pt40 pb20">    				
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<span class="pe-7s-comment heading-3-icon"></span>
-		                <h2 class="heading-3"> </h2>
-						<div class="fade-quote-carousel carousel slide" id="quote-carousel" data-ride="carousel" data-interval="3000">
-							<!-- Carousel indicators -->
-							<ol class="carousel-indicators">
-								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#quote-carousel" data-slide-to="1"></li>
-								<li data-target="#quote-carousel" data-slide-to="2"></li>
-								<li data-target="#quote-carousel" data-slide-to="3"></li>
-								<li data-target="#quote-carousel" data-slide-to="4"></li>
-								<li data-target="#quote-carousel" data-slide-to="5"></li>
-								<li data-target="#quote-carousel" data-slide-to="6"></li>
-								<li data-target="#quote-carousel" data-slide-to="7"></li>
-							</ol>
-							<!-- Carousel items -->
-							<div class="carousel-inner">
-								<div class="active item">
-									<blockquote>
-										<p>"Opportunities don't happen. You create them."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"All progress takes place outside the comfort zone."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"I failed my way to success."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"If you really look closely, most overnight successes took a long time."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"Don't let the fear of losing be greater than the excitement of winning."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"The ones who are crazy enough to think they can change the world, are the ones that do."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"Success is not final; failure is not fatal: It is the courage to continue that counts"</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"I find that the harder I work, the more luck I seem to have"</p>
-									</blockquote>
-								</div>
-							</div>
-							
-						</div><!-- /.carousel -->	
-					</div><!-- /.column -->						
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.carousel -->
-		<!-- End Quote Carousel -->
-
-	</section><!-- /.section -->
-	<!-- End Intro -->
-
-	<!-- Begin Services -->
-	<section id="services" class="background2 section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Areas de experiencia </h2>
-					<span class="section-divider"></span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-
-			<div class="row">
-				<!-- Item 1 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="services-box leftReveal">
-						<span class="pe-7s-plugin services-icon"></span>
-						<h3 class="service-name">Desarrollo de Software </h3>
-						<p class="text-small">Desarollo, manejo, diseño y programacion de software .  </p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item1-services">Mas Informacion </button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 1 Modal -->
-				<div class="modal fade" id="item1-services" tabindex="-1" role="dialog">
-				    <div class="modal-dialog">
-				        <div class="modal-content">
-				            <div class="modal-header">
-				                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
-				                </button>
-				                <span class="pe-7s-plugin services-icon-2"></span>
-				                <h4 class="service-title">Desarollo de Software</h4>
-				            </div>
-				            <div class="modal-body">
-				                <p>El uso de la información ha generado grandes cambios en nuestra vida, ofreciendo soluciones para los problemas cotidianos un software nos puede ayudar en la mejora de nuestro producto, la automatización de tareas, la mejora en el servicio al cliente, entre muchas.</p>
-				                <h5 class="heading-1 modal-heading mb20">Experiencia</h5>
-				                <p>La participacion en el desarollo de aplicaciones para el uso de macro's, el diseño Y elaboracion de GUI's y participacion en el desarollo de vvarias herramientas de seguridad de la informacion. </p>
-				                <h5 class="heading-1 modal-heading mb20">Me enfoco en:</h5>
-				                <p>Herramientas de seguridad e interfazes para el usuario. </p>
-				                <h5 class="heading-1 modal-heading mb20">Tecnologias</h5>
-				                <p class="no-margin-bottom">Java, C#, Python, rubyonrails, PHP, MySQL</p>
-				            </div>
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-
-				<!-- Item 2 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-xs">
-					<div class="services-box topReveal">
-						<span class="services-badge badge"></span>
-						<span class="pe-7s-door-lock services-icon"></span>
-						<h3 class="service-name">Seguridad Informatica</h3>
-						<p class="text-small">Analisis, planificacion e implementacion de sistemas de seguridad. </p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item2-services">Mas Informacion</button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 2 Modal -->
-				<div class="modal fade" id="item2-services" tabindex="-1" role="dialog">
-				    <div class="modal-dialog">
-				        <div class="modal-content">
-				            <div class="modal-header">
-				                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
-				                </button>
-				                <span class="pe-7s-door-lock services-icon-2"></span>
-				                <h4 class="service-title">Analisis de seguridad </h4>
-				            </div>
-				            <div class="modal-body">
-				                <p>Basandome en el triangulo CIA, me enfoco en la confidencialidad del sistema, esta se enfoca en asegurar que los objetos de un sistema solo puedan
-								ser accedidos por personal autorizado, la Integridad del sistema, que nos garantiza que los objetos de un sistema solo pueden ser modificados por el personal autorizado para ello evitando el mismanejo de  informacion y la disponibilidad (availability) que nos asegura que los elementos esten disponibles y sean accesibles por el personal autorizado.   </p>
-				                <h5 class="heading-1 modal-heading mb20">Experiencia</h5>
-				                <p>Sistemas de monitoreo, analisis de vulnerabilidades, implementacion de sistema de defensa de intrusos, sistema de prevencion de intrusos, honeypots, pentesting abierto (white hat), pruebas de ingenieria social, mitigacion de riesgo, proteccion contra DDoS. <br>
-								<br>- Microsoft Security Certified Practician <br> - Comptia Security+ Certified <br>- OSCP practitioner
-								</p>
-
-				                <h5 class="heading-1 modal-heading mb20">Costo</h5>
-				                <p class="no-margin-bottom"> Contactarme para realizar una cotizacion de acuerdo a su sistema y sus  necesidades </p>
-				            </div>
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-
-				<!-- Item 3 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-sm mt30-xs">
-					<div class="services-box rightReveal">
-						<span class="pe-7s-pen services-icon"></span>
-						<h3 class="service-name">Desarollo Web</h3>
-						<p class="text-small">Diseño y desarollo de ciclo de vida del servicio web</p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item3-services">Info</button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 3 Modal -->
-				<div class="modal fade" id="item3-services" tabindex="-1" role="dialog">
-				    <div class="modal-dialog">
-				        <div class="modal-content">
-				            <div class="modal-header">
-				                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
-				                </button>
-				                <span class="pe-7s-camera services-icon-2"></span>
-				                <h4 class="service-title">Desarollo web</h4>
-				            </div>
-				            <div class="modal-body">
-				                <p> Necesitas desarrollo web para cubrir necesidades específicas de tu negocio, por ejemplo, ¿quieres integrar un sistema de cobros en él?, ¿te gustaría que pudieran acceder a tu inventario de productos y ver cuáles están disponibles y cuánto cuestan?,estos son solo ejemplos de las posibilidades web</p>
-				                <h5 class="heading-1 modal-heading mb20">Experiencia</h5>
-				                <p>"Fullstack Developer, experiencia en sitios e-commerce, listados de compra online, sitios de agencias, restaurantes, fotografia, hoteles, y empresas financieras, sitios wordpress y otras cosas </p>
-				                <h5 class="heading-1 modal-heading mb20">Tecnologias</h5>
-				                <p>HTML5, CSS5, Javascript, Nodejs, Python, PHP, Perl, MySQL, AWS.</p>
-				                <h5 class="heading-1 modal-heading mb20"> Costo</h5>
-								<li><a href="pricing-options.html">Precios desarollo web</a></li>
-				            </div>
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-
-				<!-- Item 4 -->
-
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Services -->
-	<!-- Begin Our Count -->
-	<section id="ourcount" class="section-padding parallax-window" data-parallax="scroll" data-image-src="images/formula.jpg">
-		<div class="container">
-			<div class="row mb30">
-				<div class="section-title col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
-					<h2></h2>
-					<span class="section-divider mb15"></span>
-					<p class="no-margin">Lo que llevo en mi carrera de freelancer</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-sm-6 col-md-3 item leftReveal">
-					<div class="circle-hold">
-                        <i class="ion-coffee"></i>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>RC Asesores</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicons/favicon.ico">
+        <link rel="manifest" href="assets/images/favicons/manifest.json">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/mstile-150x150.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link href="assets/lib/hamburgers/dist/hamburgers.min.css" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+        <link href="assets/lib/jquery.mb.ytplayer/dist/css/jquery.mb.YTPlayer.min.css" rel="stylesheet">
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> </head>
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="loading" id="preloader">
+                <div class="loader h-100 d-flex align-items-center justify-content-center">
+                    <div class="line-scale">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <h2 class="timer mb5" data-from="1" data-to="14" data-refresh-interval="20">1</h2>
-                    <p class="no-margin"> Proyectos realizados</p>
-				</div><!-- /.column -->
-				<div class="col-sm-6 col-md-3 item mt30-xs rightReveal">
-					<div class="circle-hold">
-                        <i class="ion-code"></i>
+                </div>
+            </div>
+            <section class="background-primary py-3 d-none d-sm-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto d-none d-lg-block">
+                            <span class="fa fa-map-marker color-warning fw-800 icon-position-fix"></span>
+                            <p class="ml-2 mb-0 fs--1 d-inline color-white fw-700">Direccion de empresa. </p>
+                        </div>
+                        <div class="col-auto ml-md-auto order-md-2 d-none d-sm-block">
+                            <span class="fa fa-clock-o color-warning fw-800 icon-position-fix"></span>
+                            <p class="ml-2 mb-0 fs--1 d-inline color-white fw-700">Lun-Sab, 8.00-18.00. Domingo Cerradp</p>
+                        </div>
+                        <div class="col-auto">
+                            <span class="fa fa-phone color-warning fw-800 icon-position-fix"></span>
+                            <a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="tel:2123865575">Tel de empresa</a>
+                        </div>
                     </div>
-                    <h2 class="timer mb5" data-from="1" data-to="100000" data-refresh-interval="20">1</h2>
-                    <p class="no-margin">+ Lineas de codigo</p>
-				</div><!-- /.column -->
-				<div class="col-sm-6 col-md-3 item mt30-xs mt30-sm leftReveal">
-					<div class="circle-hold">
-                        <i class="ion-happy-outline"></i>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <div class="znav-white znav-container sticky-top navbar-elixir" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand overflow-hidden pr-3" href="index.html">
+                            <img src="assets/images/logo.png" alt="" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav fs-0 fw-700">
+                                <li>
+                                    <a href="">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="">Nosotros</a>
+                                </li>
+                                <li>
+                                    <a href="">Integrate</a>
+                                </li>
+                                <li>
+                                    <a href="">Asesores</a>
+                                </li>
+                                <li>
+                                    <a class="d-block mr-md-9" href="contact.html">Contactanos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <section class="p-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                <div class="background-holder" style="background-image:url(http://img.youtube.com/vi/hPCotoawhk0/maxresdefault.jpg);">
+                    <div class="youtube-background" data-property='{"videoURL":"https://www.youtube.com/watch?v=z7yqtW4Isec","startAt":15,mute:true}'></div>
+                </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
+                        <div class="col-sm-8 col-lg-7">
+                            <div class="overflow-hidden">
+                                <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0.5}'>RC Asesores</h1>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.6}'>Texto descriptivo 1 o slogan </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="zopacity" data-zanim='{"delay":0.7}'>
+                                    <a class="btn btn-primary mr-3 mt-3" href="#">Mas
+                                        <span class="fa fa-chevron-right ml-2"></span>
+                                    </a>
+                                    <a class="btn btn-warning mt-3" href="contact.html">Contactanos
+                                        <span class="fa fa-chevron-right ml-2"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="timer mb5" data-from="1" data-to="5" data-refresh-interval="20">1</h2>
-                    <p class="no-margin">Clientes Satisfechos</p>
-				</div><!-- /.column -->
-				<div class="col-sm-6 col-md-3 item mt30-xs mt30-sm rightReveal">
-					<div class="circle-hold">
-                        <i class="ion-social-tux"></i>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-white  text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-md-6">
+                            <h3 class="color-primary fs-2 fs-lg-3">Quienes somos</h3>
+                            <p class="px-lg-4 mt-3">
+                                His audiam deserunt in, eum ubique voluptatibus te. In reque dicta usu. Ne rebum dissentiet eam, vim omnis deseruisse id.</p>
+                            <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll"
+                            /> </div>
                     </div>
-                    <h2 class="timer mb5" data-from="1" data-to="20" data-refresh-interval="20">1</h2>
-                    <p class="no-margin">diferentes tecnologias</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Our Count -->
+                    <div class="row mt-4 mt-md-5">
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                            <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"delay":0}' style="height:100px; width:100px;">
+                                <span class="icon-Bar-Chart5 fs-3 color-blueish mx-auto fw-600"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim='{"delay":0.1}'>Mision</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                <br/></p>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                            <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px;">
+                                <span class="icon-Clock fs-3 color-1 mx-auto fw-600"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim='{"delay":0.1}'>Vision</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                <br/></p>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                            <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px;">
+                                <span class="icon-Idea-2 fs-3 color-blueish mx-auto fw-600"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim='{"delay":0.1}'>Valores</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                <br/>/p>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                            <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px;">
+                                <span class="icon-Headset fs-3 color-blueish mx-auto fw-600"></span>
+                            </div>
+                            <h5 class="mt-4" data-zanim='{"delay":0.1}'>Alcance</h5>
+                            <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, .
+                                <br/></p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-11 col-md-12">
+                            <div class="pos-relative mt-4 py-5 py-md-11">
+                                <div class="background-holder radius-secondary" style="background-image:url(assets/images/video-screenshot-2.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <a class="video-modal" href="https://www.youtube.com/watch?v=jlWMTNZNOc0" data-start="6" data-end="168">
+                                    <div class="btn-elixir-play" style="transform: scale(0.8);" data-zanim-trigger="scroll" data-zanim='{"from":{"opacity":0,"scale":0.8},"to":{"opacity":1,"scale":1},"duration":1}'>
+                                        <span class="ion-play fs-2"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 mt-3 mt-lg-0 text-lg-left px-4 px-sm-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="fa fa-users color-primary mr-3"></span>Equipo</h5>
+                            <p class="mt-3 pr-3 pr-lg-5" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                <br/> ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-3 mt-lg-0 text-lg-left px-4 px-sm-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="fa fa-comments color-primary mr-3"></span>Soporte al cliente</h5>
+                            <p class="mt-3 pr-3 pr-lg-5" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-3 mt-lg-0 text-lg-left px-4 px-sm-3" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="fa fa-bolt color-primary mr-3"></span>Rapidez</h5>
+                            <p class="mt-3 pr-3 pr-lg-5" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-11">
+                <div class="container">
+                    <h3 class="text-center fs-2 fs-md-3">Nuestros Servicios</h3>
+                    <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
+                    <div class="row no-gutters pos-relative mt-6">
+                        <div class="elixir-caret d-none d-lg-block"></div>
+                        <div class="col-lg-6 py-3 py-lg-0 mb-0" style="min-height:400px;">
+                            <div class="background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0" style="background-image:url(assets/images/6.jpg);"> </div>
+                            <!--/.background-holder-->
+                        </div>
+                        <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary radius-br-lg-0 radius-tr-lg-secondary">
+                            <div class="d-flex align-items-center h-100">
+                                <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Servicio 1</h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="mt-3" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                            </p>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <div data-zanim='{"delay":0.2}'>
+                                            <a class="d-flex align-items-center" href="#">Mas
+                                                <div class="overflow-hidden ml-2">
+                                                    <span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters pos-relative mt-4 mt-lg-0">
+                        <div class="elixir-caret d-none d-lg-block"></div>
+                        <div class="col-lg-6 py-3 py-lg-0 mb-0 order-lg-2" style="min-height:400px;">
+                            <div class="background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0" style="background-image:url(assets/images/7.jpg);"> </div>
+                            <!--/.background-holder-->
+                        </div>
+                        <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary radius-br-lg-0">
+                            <div class="d-flex align-items-center h-100">
+                                <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Servicio 2 </h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="mt-3" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                            </p>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <div data-zanim='{"delay":0.2}'>
+                                            <a class="d-flex align-items-center" href="#">Mas
+                                                <div class="overflow-hidden ml-2">
+                                                    <span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters pos-relative mt-4 mt-lg-0">
+                        <div class="elixir-caret d-none d-lg-block"></div>
+                        <div class="col-lg-6 py-3 py-lg-0 mb-0" style="min-height:400px;">
+                            <div class="background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0 radius-tl-lg-0 radius-bl-0 radius-bl-lg-secondary" style="background-image:url(assets/images/8.jpg);"> </div>
+                            <!--/.background-holder-->
+                        </div>
+                        <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary">
+                            <div class="d-flex align-items-center h-100">
+                                <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Servicio 3</h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="mt-3" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <div data-zanim='{"delay":0.2}'>
+                                            <a class="d-flex align-items-center" href="#">Mas
+                                                <div class="overflow-hidden ml-2">
+                                                    <span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-7">
+                        <div class="col-sm-6 col-lg-4 px-4 px-sm-3 text-lg-x" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="ion-card color-primary fs-2 icon-position-fix mr-3"></span>Financiemiento</h5>
+                            <p class="mt-3 pr-3 pr-lg-5 mb-0" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 px-4 px-sm-3 mt-4 mt-sm-0 text-lg-x" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="ion-chatbox-working color-primary mr-3"></span>Habla con nosotros</h5>
+                            <p class="mt-3 pr-3 pr-lg-5 mb-0" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                <a href="#">Comunicarme
+                                    <span class="fa fa-external-link ml-1 icon-position-fix"></span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 px-4 px-sm-3 mt-4 mt-lg-0 text-lg-x" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <h5 data-zanim='{"delay":0}'>
+                                <span class="ion-android-call color-primary mr-3"></span>Marcale a alguien</h5>
+                            <p class="mt-3 pr-3 pr-lg-5 mb-0" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row mb-6">
+                        <div class="col">
+                            <h3 class="text-center fs-2 fs-lg-3">Porque elegirnos?</h3>
+                            <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll"> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 pr-0 pr-lg-3">
+                            <img class="radius-secondary" src="assets/images/why-choose-us.jpg" alt="" />
+                        </div>
+                        <div class="col-lg-6 px-lg-5 mt-6 mt-lg-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="overflow-hidden">
+                                <div class="px-4 px-sm-0" data-zanim='{"delay":0}'>
+                                    <h5 class="fs-0 fs-lg-1">
+                                        <span class="ion-chatbubble-working fs-2 mr-2 icon-position-fix fw-800"></span>Equipo profesional</h5>
+                                    <p class="mt-3 px-lg-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.1}'>
+                                    <h5 class="fs-0 fs-lg-1">
+                                        <span class="ion-android-color-palette fs-2 mr-2 icon-position-fix fw-800"></span>Confiables</h5>
+                                    <p class="mt-3 px-lg-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.2}'>
+                                    <h5 class="fs-0 fs-lg-1">
+                                        <span class="ion-ios-timer fs-2 mr-2 icon-position-fix fw-600"></span>Soporte </h5>
+                                    <p class="mt-3 px-lg-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class=" background-primary py-6">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md">
+                            <h4 class="color-white mb-0">Estamos disponibles las 24 horas del dia
+                                <br class="d-md-none" />24/7</h4>
+                        </div>
+                        <div class="col-md-auto mt-md-0 mt-4">
+                            <a class="btn btn-white btn-capsule" href="contact.html">Ponte en Contacto</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="text-center">
+                <div class="container">
+                    <h3>Lo que obtienes con nosotros</h3>
+                    <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Double-Circle fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 1 </h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Mail-2 fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 2 </h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Archery-2 fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 3</h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Globe-2 fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 4</h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Money-2 fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 5</h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                            <div class="px-3 py-4 px-lg-4">
+                                <div class="overflow-hidden">
+                                    <span class="icon-Bar-Chart fs-3 color-primary fw-600" data-zanim='{"delay":0}'></span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h5 class="mt-3" data-zanim='{"delay":0.1}'>Tema opcional 6</h5>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-primary">
+                <div class="container">
+                    <div class="row align-items-center color-white">
+                        <div class="col-lg-4">
+                            <div class="border border-2x border-color-warning p-4 py-lg-5 text-center radius-secondary" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                <div class="overflow-hidden">
+                                    <h4 class="color-white" data-zanim='{"delay":0}'>Necesitas una llamada?</h4>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="px-lg-1 color-11 mb-0" data-zanim='{"delay":0.1}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 pl-lg-5 mt-6 mt-lg-0">
+                            <h5 class="color-white">Me gustaria hablar de:</h5>
+                            <form class="zform mt-4" method="post">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input class="form-control" type="hidden" name="to" value="username@domain.extension" />
+                                        <input class="form-control" type="text" placeholder="Your Name" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-6">
+                                        <input class="form-control" type="text" placeholder="Phone Number" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-6 mt-4">
+                                        <input class="form-control" type="text" placeholder="Subject" aria-label="Text input with dropdown button" /> </div>
+                                    <div class="col-6 mt-4">
+                                        <button class="btn btn-warning btn-block" type="submit">Enviar</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="zform-feedback mt-4"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-11  text-center">
+                <div class="container">
+                    <div class="row mb-6">
+                        <div class="col">
+                            <h3 class="fs-2 fs-md-3"> Lideres Globales</h3>
+                            <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll"> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="background-white pb-4 h-100 radius-secondary">
+                                <img class="mb-4 radius-tr-secondary radius-tl-secondary" src="assets/images/portrait-3.jpg" alt="Profile Picture" />
+                                <div class="px-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Rodrigo Corona</h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h6 class="fw-400 color-7" data-zanim='{"delay":0.1}'>Asesor</h6>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="py-3 mb-0" data-zanim='{"delay":0.2}'> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-4 mt-sm-0">
+                            <div class="background-white pb-4 h-100 radius-secondary">
+                                <img class="mb-4 radius-tr-secondary radius-tl-secondary" src="assets/images/portrait-4.jpg" alt="Profile Picture" />
+                                <div class="px-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Persona 2 </h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h6 class="fw-400 color-7" data-zanim='{"delay":0.1}'>Puesto </h6>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="py-3 mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mt-4 mt-lg-0">
+                            <div class="background-white pb-4 h-100 radius-secondary">
+                                <img class="mb-4 radius-tr-secondary radius-tl-secondary" src="assets/images/portrait-5.jpg" alt="Profile Picture" />
+                                <div class="px-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                    <div class="overflow-hidden">
+                                        <h5 data-zanim='{"delay":0}'>Persona 3</h5>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h6 class="fw-400 color-7" data-zanim='{"delay":0.1}'>Puesto</h6>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="py-3 mb-0" data-zanim='{"delay":0.2}'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-	<!-- Start Profile -->
-	<section id="profile" class="background2 section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Perfil</h2>
-					<span class="section-divider"></span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-sm-4">
-					<img alt="" src="images/meandsis.jpg" class="img-responsive">
-					<div class="profile-box">
-						<ul class="list-unstyled">
-							<li><strong>Nombre:</strong> Luis Garcia Calzada</li>
-							<li><strong>Tel:</strong> +52 (442)668-2688</li>
-							<li><strong>Email:</strong> luisgc.py@gmail.com</li>
-						</ul>
-					</div>
-				</div><!-- column -->
-				<div class="col-sm-8 mt30-xs">
-					<h5 class="heading-1 mb20">Intro</h5>
-					<h3 class="mb15 no-margin-top">Hola, mi nombre es Luis Garcia Calzada. </h3>
-					<p class="text-small text-switch">Bachelor of Information Technology in Computer Networking & Computer Programming Analysis"</p>
-					<span class="divider"></span>
-					<p class="text-small">Me gusta enfocarme en areas de desarollo e implementacion que aun estan en sus etapas tempranas tales como la inteligencia artificial y los sitemas decentralizados que implementan libros contables distribuidos (blockchain),  tambien disfruto el diseño y la elaboracion de tecnologias web y la interaccion de estas con el usuario.</p>
-					<h5 class="heading-1 mt20 mb20">Habilidades</h5>
-					<div class="progress">
-						<div class="progress-bar text-left" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-							Programacion
-						</div>
-					</div>
-					<div class="progress">
-						<div class="progress-bar text-left" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-							Development
-						</div>
-					</div>
-					<div class="progress">
-						<div class="progress-bar text-left" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-							Networks
-						</div>
-					</div>
-					<div class="progress-meter">
-						<div class="meter meter-left" style="width: 30%;"><span class="meter-text">Principiante</span></div>
-						<div class="meter meter-left" style="width: 20%;"><span class="meter-text">Intermedio</span></div>
-		    			<div class="meter meter-right" style="width: 20%;"><span class="meter-text">Pro</span></div>
-						<div class="meter meter-right" style="width: 30%;"><span class="meter-text">Master</span></div>
-					</div>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section>
-	<!-- End Profile -->
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="background-holder overlay overlay-elixir" style="background-image:url(assets/images/background-15.jpg);"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="media">
+                                <span class="ion-android-checkmark-circle fs-5 color-warning mr-3" style="transform: translateY(-1rem);"></span>
+                                <div class="media-body">
+                                    <h2 class="color-warning fs-3 fs-lg-4">Haz lo correcto
+                                        <br/>
+                                        <span class="color-white">asegurate.</span>
+                                    </h2>
+                                    <div class="row mt-4 pr-lg-10">
+                                        <div class="col-md-3 overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                            <div class="fs-3 fs-lg-4 mb-0 lh-2 fw-700 color-white mt-lg-5 mt-3" data-zanim='{"delay":0.1}'>200</div>
+                                            <h6 class="fs-0 color-white" data-zanim='{"delay":0.2}'>Casos resueltos</h6>
+                                        </div>
+                                        <div class="col col-lg-3 overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                            <div class="fs-3 fs-lg-4 mb-0 lh-2 fw-700 color-white mt-lg-5 mt-3" data-zanim='{"delay":0.1}'>12</div>
+                                            <h6 class="fs-0 color-white" data-zanim='{"delay":0.2}'>Expertos</h6>
+                                        </div>
+                                        <div class="w-100 d-flex d-lg-none"></div>
+                                        <div class="col-md-3 overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                            <div class="fs-3 fs-lg-4 mb-0 lh-2 fw-700 color-white mt-lg-5 mt-3" data-zanim='{"delay":0.1}'>5</div>
+                                            <h6 class="fs-0 color-white" data-zanim='{"delay":0.2}'>Oficinas</h6>
+                                        </div>
+                                        <div class="col col-lg-3 overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                            <div class="fs-3 fs-lg-4 mb-0 lh-2 fw-700 color-white mt-lg-5 mt-3" data-zanim='{"delay":0.1}'>100%</div>
+                                            <h6 class="fs-0 color-white" data-zanim='{"delay":0.2}'>Clientes satisfechos</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class=" background-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="owl-carousel owl-theme owl-dot-round" data-options='{"nav":true,"dots":false,"loop":true,"autoplay":true,"autoplayHoverPause":true,"items":1}'>
+                                <div class="row px-lg-8">
+                                    <div class="col-4 col-md-3 mx-auto">
+                                        <img class="radius-secondary mx-auto" src="assets/images/client1.png" alt="Member" style="width: auto;" />
+                                    </div>
+                                    <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
+                                        <p class="lead fw-400">Testimonio de algun cliente, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt </p>
+                                        <h6 class="fs-0 mb-1 mt-4">Superman</h6>
+                                        <p class="mb-0 color-7">CEO, Microsoft</p>
+                                    </div>
+                                </div>
+                                <div class="row px-lg-8">
+                                    <div class="col-4 col-md-3 mx-auto">
+                                        <img class="radius-secondary mx-auto" src="assets/images/client2.png" alt="Member" style="width: auto;" />
+                                    </div>
+                                    <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
+                                        <p class="lead fw-400">Testimonio de algun cliente, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                        <h6 class="fs-0 mb-1 mt-4">Maria Sharapova</h6>
+                                        <p class="mb-0 color-7">CTO, Apple</p>
+                                    </div>
+                                </div>
+                                <div class="row px-lg-8">
+                                    <div class="col-4 col-md-3 mx-auto">
+                                        <img class="radius-secondary mx-auto" src="assets/images/client3.png" alt="Member" style="width: auto;" />
+                                    </div>
+                                    <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
+                                        <p class="lead fw-400">Testimonio de algun cliente, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                                        <h6 class="fs-0 mb-1 mt-4">David Beckham</h6>
+                                        <p class="mb-0 color-7">CFO, Google</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-10 py-6">
+                <div class="container">
+                    <div class="row align-items-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                        <div class="col-4 col-md-2 my-3 overflow-hidden">
+                            <img src="" alt="" data-zanim="{}" />
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
 
-	<!-- Begin Work -->
-	<section id="work" class="background1 section-padding-top">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Proyectos en curso</h2>
-					<span class="section-divider mb15"></span>
-					<p class="mb30 scaleReveal">me gusta hacer cosas muy cool</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-xs-12 text-center mb50">
-					<!-- Filter Buttons -->
-					<button class="filter btn btn-default btn-category btn-lg" data-filter="all">Todos</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".identity">Seguridad</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".print">Web</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".graphics">Redes</button>
-
-					<!-- Sort Buttons -->
-					<button class="sort btn btn-default btn-sort btn-lg" data-sort="my-order:asc"><span class="ion-ios-plus-empty"></span></button>
-					<button class="sort btn btn-default btn-sort btn-lg" data-sort="my-order:desc"><span class="ion-ios-minus-empty"></span></button>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div id="thework">
-				<!-- Item 1 -->
-			    <!-- Item 2 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="6">
-			    	<div class="portfolio-image-holder"><img src="images/work/blockchain.png" alt="2" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">p2p Overlay Network built on NodeJs</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://github.com/luisxciv/pact-network" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href="images/work/2.jpg" class="zoom" title="Goodman's Burger">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">PACT NETWORK</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="6">
-					<div class="portfolio-image-holder"><img src="images/work/web.png" alt="2" class="img-responsive portfolio-image"></div>
-					<span class="portfolio-badge badge">one page display sample website</span>
-					<span class="portfolio-hover">
-						<span>
-							<a href="http://markup.themewagon.com/reign-v2.0/preview/index.html" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href="images/work/2.jpg" class="zoom" title="Goodman's Burger">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Re!gn</span>
-						</span>
-					</span>
-				</div><!-- /.column -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="6">
-					<div class="portfolio-image-holder"><img src="images/work/skull.png" alt="2" class="img-responsive portfolio-image"></div>
-					<span class="portfolio-badge badge">e-commerce listing site</span>
-					<span class="portfolio-hover">
-						<span>
-							<a href="./projects/tianguis/index.html" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href="images/work/2.jpg" class="zoom" title="Goodman's Burger">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Tianguis.mx</span>
-						</span>
-					</span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- Begin Work -->
-
-	<!-- Begin Timeline -->
-	<section id="timeline" class="background1 section-padding-top">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Mi linea del tiempo</h2>
-					<span class="section-divider"></span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="timeline pb80">
-
-						<!-- Item 1 -->
-						<li>
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/tdsb.png"></div>
-							<div class="timeline-panel rightReveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">Septiembre 2016</h5>
-									<h4 class="subheading">IT Analyst @ TDSB</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Internado en el distrito escolar de Toronto como analista de sistemas y tecnico migrador de red a VoIP</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/java.png"></div>
-							<div class="timeline-panel leftreveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">Diciembre 2016</h5>
-									<h4 class="subheading">Developer @ Sythe.org</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Desarrollador de medio tiempo para sitio online, diseccion y patching de codigo sin documentacion en Java,   </p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 2 -->
-						<li class="timeline-inverted">
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/security.png"></div>
-							<div class="timeline-panel rightreveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">Abril 2017</h5>
-									<h4 class="subheading">Certificacion Sec</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Primera certificacion en el area de seguridad, Comptia security+, 5 meses mas tarde recibo mi segunda certificacion en seguridad OSCP certified practicioner</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 3 -->
-						<li>
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/seneca.png"></div>
-							<div class="timeline-panel leftreveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">Agosto 2017</h5>
-									<h4 class="subheading">B.IT in Computer Programming Analysis and Computer Networking Architect</h4>
-								</div>
-								<div class="timeline-body"> <p>Despues de 4 largos y duros años de carrera en Toronto Canada concluyo mis estudios y recibo mi titulo universitario</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 4 -->
-						<li class="timeline-inverted">
-							<div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/hp.png"></div>
-							<div class="timeline-panel rightreveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">Diciembre 2017</h5>
-									<h4 class="subheading">Software Developer @ HP Mexico</h4>
-								</div>
-								<div class="timeline-body">
-									<p> Mientras era un trabajo divertido decidi que la ciudad de mexico no era para mi y que me gustaria dedicarme a elaborar mis propios proyectos sin restricciones creativas. .</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Timeline -->
-
-	<!-- Begin Team -->
-
-	<!-- Begin Contact -->
-	<section id="contact" class="background2 section-padding">
-		<div class="container">
-			<div class="row mb30">
-				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
-					<h2>Contactame</h2>
-					<span class="section-divider mb15"></span>
-					<p class="no-margin scaleReveal">Porfavor escribeme y platicame de tu idea para elaborarla </p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-sm-5 col-lg-4">
-					<h5 class="heading-1 mb20">Donde Me encuentro?</h5>
-					<h4 class="mb15">Club Campestre<br>Queretaro, QRO, 76190</h4>
-					<hr class="mini-hr">
-					<p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> luisgc.py@gmail.com</p>
-					<p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +52 442-668-2688</p>
-				</div><!-- /.column -->
-				<div class="col-sm-6 col-lg-7 mt30-xs">
-					<form data-toggle="validator" id="contactForm" name="contactForm">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" data-error="This section is required."
-										id="msg_subject" placeholder="Subject *" required="" type="text">
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div><!-- /.column -->
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" id="phone" placeholder="Phone" type="text">
-									</div>
-								</div>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
-						<div class="row mb10">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" data-error="This section is required." id="name" placeholder="Your Name *" required="" type="text">
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div><!-- /.column -->
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="email form-control" data-error="This section is required." id="email" placeholder="Email *" required="" type="email">
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<div class="controls">
-										<textarea class="form-control" data-error="This section is required." id="message" placeholder="Message *" required="" rows="5"></textarea>
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row mt15">
-							<div class="col-sm-6">
-								<div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div> 
-							</div><!-- /.column -->
-							<div class="col-sm-6 text-right">
-								<button type="submit" id="submit" class="btn btn-default btn-lg">Send</button>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
-					</form><!-- /.form -->
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Contact -->
-
-	<!-- Begin Map -->
-	<div id="map"></div>
-	<!-- End Map -->
-
-	<!-- Begin Footer -->
-	<footer class="footer-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2 text-center">
-					<a href="#"><span class="ion-social-twitter social-icons-dark-hover mr15"></span></a>
-	                <a href="#"><span class="ion-social-facebook social-icons-dark-hover mr15"></span></a>
-	                <a href="#"><span class="ion-social-googleplus-outline social-icons-dark-hover"></span></a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2 text-small text-center">
-					<hr>
-					<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">pa'rriba</button>
-					<p class="no-margin">&copy; Luis Garcia Calzada</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</footer><!-- /.footer -->
-	<!-- Begin Footer -->
-
-	<!-- Javascript Files -->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M&callback=initMap" async defer></script>
-    <script type="text/javascript">
-		/* ---- Google Maps ---- */
-        function initMap() {
-            var mapOptions = {
-                zoom: 15,
-				zoomControl: false,
-				scaleControl: false,
-				scrollwheel: false,
-				disableDoubleClickZoom: true,
-                center: new google.maps.LatLng(20.592564, -100.3931823), / Queretaro
-                styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Our Office!'
-            });
-        }
-    </script>
-	<script type="text/javascript" src="js/particles.min.js"></script>
-	<script type="text/javascript" src="js/particlesRun.js"></script>
-	<script type="text/javascript" src="js/jquery.mixitup.js"></script>
-	<script type="text/javascript" src="js/form-validator.min.js"></script>  
-	<script type="text/javascript" src="js/jquery.inview.min.js"></script>
-	<script type="text/javascript" src="js/jquery.countTo.js"></script>  
-	<script type="text/javascript">
-		/* ---- Counter (our count) ---- */
-		$('#ourcount').one('inview', function(event, isInView) {
-			if (isInView) {
-				$('.timer').countTo({speed: 3000});
-			}
-		});
-	</script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
-	<script type="text/javascript" src="js/style-switcher.js"></script><!-- Remove for production -->
-	<script type="text/javascript" src="js/main.js"></script>
-</body>
+            <section class="background-primary text-center py-4">
+                <div class="container">
+                    <div class="row align-items-center" style="opacity: 0.85;">
+                        <div class="col-sm-3 text-sm-left">
+                            <a href="index.html">
+                                <img src="" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 mt-3 mt-sm-0">
+                            <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright 2018</p>
+                        </div>
+                        <div class="col text-sm-right mt-3 mt-sm-0">
+                            <a class="color-white" href="https://themewagon.com/" target="_blank"> </a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/lib/gsap/src/minified/TweenMax.min.js"></script>
+        <script src="assets/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+        <script src="assets/lib/CustomEase.min.js"></script>
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/zanimation.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/remodal/dist/remodal.js"></script>
+        <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+        <script src="assets/lib/lightbox2/dist/js/lightbox.js"></script>
+        <script src="assets/lib/flexslider/jquery.flexslider-min.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
